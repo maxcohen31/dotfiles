@@ -38,6 +38,9 @@ alias l='ls'
 alias l.="ls -A | egrep '^\.'"
 alias c="clear"
 
+# Neovim
+alias nv='nvim'
+
 # sort file by size
 alias lt="ls -human-readable --size -1 -S --classify"
 
