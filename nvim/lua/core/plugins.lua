@@ -13,7 +13,6 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'fedepujol/move.nvim'
   -- use 'ellisonleao/gruvbox.nvim'
   use 'folke/tokyonight.nvim'
   -- use "EdenEast/nightfox.nvim"

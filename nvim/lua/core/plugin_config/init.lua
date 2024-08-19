@@ -1,4 +1,4 @@
-require("core.plugin_config.tokyonight")
+--require("core.plugin_config.tokyonight")
 -- require("core.plugin_config.gruvbox")
 -- require("core.plugin_config.nightfox")
 -- require("core.plugin_config.kanagawa")
@@ -11,5 +11,5 @@ require("core.plugin_config.completions")
 require("core.plugin_config.lsp_config")
 require("core.plugin_config.autopairs")
 require("core.plugin_config.toggleterm")
--- require("core.plugin_config.catppuccin")
+require("core.plugin_config.catppuccin")
 
