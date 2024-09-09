@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
      }
   use {
 	  'nvim-telescope/telescope.nvim',
-	  tag = '0.1.0',
+	  tag = '0.1.8',
 	  requires = { {'nvim-lua/plenary.nvim'} }
       }
   -- My plugins here
