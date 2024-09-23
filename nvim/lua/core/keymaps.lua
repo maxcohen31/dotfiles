@@ -1,3 +1,6 @@
+local term_opts = { noremap = true, silent = true }
+local = vim.keymap.set
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.backspace = '2'
@@ -16,26 +19,44 @@ vim.opt.expandtab = true
 vim.o.number = true
 vim.o.signcolumn = 'yes'
 
+-- Move text up and down
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
-local opts = { noremap = true, silent = true }
+-- Move text up and down
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "p", '"_dP', opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap("x", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("x", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+
+
+keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+
+
 -- Normal-mode commands
-vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', opts)
-vim.keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
-vim.keymap.set('n', '<A-h>', ':MoveHChar(-1)<CR>', opts)
-vim.keymap.set('n', '<A-l>', ':MoveHChar(1)<CR>', opts)
-vim.keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', opts)
-vim.keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', opts)
+keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
+keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', opts)
+keymap.set('n', '<A-h>', ':MoveHChar(-1)<CR>', opts)
+keymap.set('n', '<A-l>', ':MoveHChar(1)<CR>', opts)
+keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', opts)
+keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', opts)
 
 -- Visual-mode commands
-vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
-vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
-vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
-vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
+keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
+keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
+keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
 
 -- Move lines 
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+keymap.set("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
+keymap.set("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
+keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
