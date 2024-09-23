@@ -26,7 +26,9 @@ local dashboard = require("alpha.themes.dashboard")
 [[ `''                                                                      ``' ]],
 
     }
+
 dashboard.section.buttons.val = {
+dashboard.button("e", ">find file", ":ene! <CR>"),
 dashboard.button("f", ">find file", ":Telescope find_files <CR>"),
 dashboard.button("p", ">find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
 dashboard.button("r", ">recent files", ":Telescope oldfiles <CR>"),
