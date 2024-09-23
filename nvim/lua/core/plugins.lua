@@ -43,6 +43,17 @@ return require('packer').startup(function(use)
 	  tag = '0.1.8',
 	  requires = { {'nvim-lua/plenary.nvim'} }
       }
+  use {
+      'goolord/alpha-nvim',
+      requires = {
+          --'echasnovski/mini.icons',
+         'nvim-lua/plenary.nvim'
+      },
+    config = function ()
+        --require'alpha'.setup(require'alpha.themes.startify'.config)
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+    }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
