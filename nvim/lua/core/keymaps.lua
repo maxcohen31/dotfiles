@@ -35,10 +35,8 @@ keymap("x", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "K", ":m '<-2<CR>gv=gv", opts)
 keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
-keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
-
-keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+keymap('n', '<leader>h', ':nohlsearch<CR>')
 
 
 -- Normal-mode commands
