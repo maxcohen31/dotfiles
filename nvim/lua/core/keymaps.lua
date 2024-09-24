@@ -1,5 +1,9 @@
-local term_opts = { noremap = true, silent = true }
-local = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+local term_opts = { silent = true }
+
+-- Shorten function name
+local keymap = vim.keymap.set
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -36,25 +40,25 @@ keymap("x", "K", ":m '<-2<CR>gv=gv", opts)
 keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
-keymap('n', '<leader>h', ':nohlsearch<CR>')
+keymap('n', '<leader>h', ':nohlsearch<CR>', opts)
 
 
 -- Normal-mode commands
-keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
-keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', opts)
-keymap.set('n', '<A-h>', ':MoveHChar(-1)<CR>', opts)
-keymap.set('n', '<A-l>', ':MoveHChar(1)<CR>', opts)
-keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', opts)
-keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', opts)
+keymap('n', '<A-k>', ':MoveLine(-1)<CR>', opts)
+keymap('n', '<A-j>', ':MoveLine(1)<CR>', opts)
+keymap('n', '<A-h>', ':MoveHChar(-1)<CR>', opts)
+keymap('n', '<A-l>', ':MoveHChar(1)<CR>', opts)
+keymap('n', '<leader>wf', ':MoveWord(1)<CR>', opts)
+keymap('n', '<leader>wb', ':MoveWord(-1)<CR>', opts)
 
--- Visual-mode commands
-keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
-keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
-keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
-keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+-- Vismode commands
+keymap('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
+keymap('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
+keymap('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
+keymap('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
 
--- Move lines 
-keymap.set("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
-keymap.set("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
-keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
-keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+-- Movnes 
+keymap("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
+keymap("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
