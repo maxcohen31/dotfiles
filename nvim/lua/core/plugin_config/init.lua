@@ -64,4 +64,4 @@ require("core.plugin_config.lsp_config")
 require("core.plugin_config.autopairs")
 require("core.plugin_config.toggleterm")
 require("core.plugin_config.catppuccin")
-
+require("core.plugin_config.alpha")
