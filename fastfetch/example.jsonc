@@ -1,0 +1,130 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "arch",
+        "padding": {
+            "top": 2
+        }
+    },
+    "display": {
+        "separator": " -> "
+    },
+    "modules": [
+        "title",
+        "separator",
+        {
+            "type": "custom",
+            "format": "┌────────────────────── Software ──────────────────────┐",
+            "outputColor": "green"
+        },
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "green",
+            "format": "{2}"
+        },
+        {
+            "type": "os",
+            "key": "├", 
+            "keyColor": "green",
+            "format": "{6}{?6} {?}{10} {8}"
+        },
+        {
+            "type": "kernel",
+            "key": "├",
+            "keyColor": "green"
+        },
+        {
+            "type": "packages",
+            "key": "├󰏖",
+            "keyColor": "green"
+        },
+        {
+            "type": "shell",
+            "key": "└",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────────────┘",
+            "outputColor": "green"
+        },
+        "break",
+
+        {
+            "type": "custom",
+            "format": "┌────────────────────── Hardware ──────────────────────┐",
+            "outputColor": "green"
+        },
+      
+
+        {
+            "type": "host",
+            "key": " PC",
+            "keyColor": "green"
+        },
+      
+        {
+            "type": "cpu",
+            "key": "├",
+            "keyColor": "green"
+        },
+        
+        {
+            "type": "gpu",
+            "key": "├﬙",
+            "keyColor": "green",
+            "enable": false
+        },
+        
+        {
+            "type": "disk",
+            "key": "├",
+            "keyColor": "green"
+        },
+        {
+            "type": "memory",
+            "key": "├󰑭",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────────────┘",
+            "outputColor": "green"
+        },
+        "break",
+        {
+            "type": "swap",
+            "key": "├󰓡",
+            "keyColor": "green"
+        },
+        {
+            "type": "uptime",
+            "key": "├󰅐",
+            "keyColor": "green"
+        },
+        
+        {
+            "type": "custom",
+            "format": "               \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m "
+        },
+
+        "break",
+        
+        /*
+        {
+            "type": "player",
+            "key": "├󰥠",
+            "keyColor": "cyan"
+        },
+        
+        {
+            "type": "media",
+            "key": "└󰝚",
+            "keyColor": "cyan"
+        },
+        
+        "break",
+        */
+    ]
+}
