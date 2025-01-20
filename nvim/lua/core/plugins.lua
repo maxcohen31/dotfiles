@@ -54,6 +54,13 @@ return require('packer').startup(function(use)
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
     }
+
+    use { "nvim-neotest/nvim-nio" }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+    -- java development
+    use 'mfussenegger/nvim-jdtls'
+    use 'mfussenegger/nvim-dap'
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
