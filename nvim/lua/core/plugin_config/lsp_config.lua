@@ -19,12 +19,13 @@ end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+-- lua
 require('lspconfig').lua_ls.setup {
 
     on_attach = on_attach,
     capabilities = capabilities
 }
-
+-- c/c++
 require('lspconfig').clangd.setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -34,6 +35,7 @@ require('lspconfig').clangd.setup {
     }
 }
 
+-- python
 require('lspconfig').pyright.setup{
   on_attach = on_attach,
   capabilities = capabilities,
@@ -48,3 +50,21 @@ require('lspconfig').pyright.setup{
   }
 }
 
+-- typescript
+local lspconfig = require("lspconfig")
+
+lspconfig.ts_ls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    init_options = {
+        preferences = {
+            disableSuggestion = true
+        }
+    }
+}
+
+--  java
+ require("lspconfig").jdtls.setup({
+     capabilities = capabilities,
+     on_attach = on_attach,
+ })
