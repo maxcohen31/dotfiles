@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- use 'ellisonleao/gruvbox.nvim'
   use 'folke/tokyonight.nvim'
-  -- use "EdenEast/nightfox.nvim"
+  use "EdenEast/nightfox.nvim"
   --use "rebelot/kanagawa.nvim"
   -- use { "catppuccin/nvim", as = "catppuccin" }
   use {
