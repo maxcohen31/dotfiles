@@ -55,7 +55,7 @@
 -- require("core.plugin_config.kanagawa")
 -- require("core.plugin_config.nightfox")
 -- require("core.plugin_config.nord")
-require("noirbuddy").setup()
+require("noirbuddy").setup { preset = 'miami-nights' }
 require("core.plugin_config.nvim-tree")
 require("core.plugin_config.lualine")
 require("core.plugin_config.treesitter")
