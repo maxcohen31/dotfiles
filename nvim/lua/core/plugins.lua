@@ -18,11 +18,14 @@ return require('packer').startup(function(use)
   --use "EdenEast/nightfox.nvim"
   --use "rebelot/kanagawa.nvim"
   -- use { "catppuccin/nvim", as = "catppuccin" }
-  use 'shaunsingh/nord.nvim'
+  use {
+  "jesseleite/nvim-noirbuddy",
+  requires = { "tjdevries/colorbuddy.nvim" }
+    }
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {'nvim-tree/nvim-web-devicons'}
-      }
+    }
   use 'nvim-lualine/lualine.nvim'
   use 'vim-test/vim-test'
   use 'nvim-treesitter/nvim-treesitter'
